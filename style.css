@@ -1,0 +1,78 @@
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: grey;
+}
+
+.header {
+    background-image: url(img/Riftbound01_Template-1080x1080-1.webp);
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1780px;
+    color: white;
+    padding: 30px;
+}
+
+.info h2 {
+    color: Black;
+}
+.navigation ol {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.navs {
+    display: inline-block;
+    padding: 5px;
+}
+
+.navigation a {
+    display: inline-block;
+    color: gray;
+    text-decoration: none;
+}
+
+.navs a:hover {
+    color: white;
+    transform: translateY(-2px);
+}
+
+footer {
+    background-color: grey;
+    background-image: url(img/pattern-white.png);
+    height: 150px;
+    width: auto;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 30px;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.card {
+    width: 250px;
+}
+
+.cardart {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-text {
+    padding-top: 2px;
+}
+
+.card-text h2 {
+    font-size: 20px;
+}
+
+.card-text h3 {
+    font-size: 16px;
+}
