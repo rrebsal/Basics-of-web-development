@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Harjoitussivuuuu</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1 class="site-title">Titteliiiiiii</h1>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#">Description</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#" id="signin-link">Sign up</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="hero" role="img">
+      </div>
+
+      <section class="intro">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur voluptate quidem nihil. Suscipit laboriosam ex minus, recusandae provident pariatur voluptate blanditiis earum placeat omnis quis dolorum, ea expedita in aliquid!</p>
+        <button id="open-dialog-btn" type="button">Dialog magick</button>
+      </section>
+      <section class="about">
+        <h2>About us</h2>
+
+        <img
+          class="about-img"
+          src="img/brian.png"
+          alt="Kuvituskuva"
+        />
+
+        <p>
+          textextextextextextexttextextextextextextexttextextextextexttext
+          extextexttextextextextextextexttextextextextextextexttext
+          extextextextextextext
+        </p>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <p>Footer</p>
+    </footer>
+
+    <dialog id="infodia">
+      <h2>Dialogi</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor at, illo eius officia repellat eum explicabo molestiae, quam nisi autem asperiores itaque minus, neque cumque perferendis aliquam eveniet harum impedit!
+      </p>
+      <button id="close-dialog-btn" type="button">Close</button>
+    </dialog>
+
+    <dialog id="signin-dialog">
+      <h2>Sign in</h2>
+
+      <form id="dialog-form">
+        <div class="form-group">
+          <label>Username</label>
+          <input type="text" id="username"/>
+        </div>
+
+        <div class="divform">
+          <label>Password</label>
+          <input type="text" id="password"/>
+        </div>
+
+        <div class="divform">
+          <label>Email</label>
+          <input type="text" id="email"/>
+        </div>
+
+        <div class="dialog-buttons">
+          <button type="submit">Sign up</button>
+          <button id="close-signin-btn" type="button">Close</button>
+        </div>
+      </form>
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>
