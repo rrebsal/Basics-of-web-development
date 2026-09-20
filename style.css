@@ -1,0 +1,321 @@
+
+@font-face {
+  font-family: "Inter";
+  src: url("fonts/inter-latin-400-normal.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("fonts/inter-latin-700-normal.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --color-bg-dark: #111111;
+  --color-bg-light: #ffffff;
+  --color-bg-section: #c8c8c8;
+  --color-bg-card: #f2f2f2;
+  --color-text-dark: #1a1a1a;
+  --color-text-light: #f5f5f5;
+  --color-accent: #3978c5;
+  --color-border: #999999;
+  --radius: 6px;
+
+  --font-heading: "Poppins", Arial, Helvetica, sans-serif;
+  --font-body: "Inter", Arial, Helvetica, sans-serif;
+
+  /* Responsiiviset välit */
+  --space-page-x: clamp(1rem, 4vw, 2rem);
+  --space-main-top: clamp(1rem, 3vw, 2rem);
+  --space-section: clamp(2rem, 6vw, 4rem);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--color-text-dark);
+  background-color: var(--color-bg-light);
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+.site-header {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem var(--space-page-x);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.site-title {
+  margin: 0;
+  font-weight: 400;
+  font-size: clamp(1.4rem, 1rem + 1.5vw, 1.8rem);
+}
+
+.main-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  display: inline-block;
+  color: var(--color-text-light);
+  text-decoration: none;
+  padding: 0.4rem 1rem;
+  border-radius: var(--radius);
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.main-nav li:not(:last-child) a:hover {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.main-nav li:last-child a:hover {
+  background-color: var(--color-text-light);
+  color: var(--color-bg-dark);
+}
+
+main {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: var(--space-main-top) var(--space-page-x) 4rem;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: clamp(220px, 45vh, 500px);
+  padding: 1rem;
+  background-image: url('img/fullbrian.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: calc(var(--space-main-top) * -1);
+}
+
+.hero-content {
+  flex: 0 1 36rem;
+  padding: clamp(1rem, 4vw, 2.5rem);
+  background-color: rgba(17, 17, 17, 0.7);
+  color: var(--color-text-light);
+  text-align: center;
+  border-radius: var(--radius);
+}
+
+.hero-content h2 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.5rem, 1rem + 3vw, 2.75rem);
+}
+
+.hero-content p {
+  margin: 0;
+  font-size: clamp(1rem, 0.9rem + 0.5vw, 1.25rem);
+}
+
+.intro {
+  min-height: 25vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.intro > button,
+.bottomsign > button {
+  align-self: flex-start;
+  background-color: var(--color-accent);
+  color: var(--color-text-light);
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.intro > button:hover,
+.bottomsign > button:hover {
+  background-color: #2c5f9c;
+}
+
+.features {
+  margin-bottom: var(--space-section);
+}
+
+.features h2 {
+  margin-top: 0;
+  font-size: clamp(1.5rem, 1.1rem + 1.5vw, 2rem);
+}
+
+.weird-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(1rem, 3vw, 1.5rem);
+}
+
+.weird-card {
+  flex: 1 1 15rem;
+  padding: clamp(1rem, 3vw, 1.5rem);
+  background-color: var(--color-bg-card);
+  border-left: 4px solid var(--color-accent);
+  border-radius: var(--radius);
+}
+
+.feature-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+}
+
+.feature-card p {
+  margin: 0;
+}
+
+.about {
+  background-color: var(--color-bg-section);
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(0, 0, 0, 0.05)
+  );
+  padding: clamp(1rem, 4vw, 2rem);
+  overflow: hidden;
+}
+
+.about h2 {
+  margin-top: 0;
+}
+
+.about-img {
+  float: left;
+  width: clamp(140px, 30%, 280px);
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  margin: 0 1.5rem 1rem 0;
+  border: 2px solid var(--color-text-dark);
+  background-color: var(--color-bg-section);
+}
+
+.about p {
+  margin: 0;
+}
+
+.bottomsign {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+  margin-top: var(--space-section);
+  padding: clamp(1.25rem, 4vw, 2.5rem);
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-light);
+  border-radius: var(--radius);
+}
+
+.bottomsign-text {
+  flex: 1 1 18rem;
+}
+
+.bottomsign-text h2 {
+  margin: 0 0 0.25rem;
+  font-size: clamp(1.4rem, 1rem + 1.5vw, 1.9rem);
+}
+
+.bottomsign-text p {
+  margin: 0;
+}
+
+.bottomsign > button {
+  align-self: center;
+}
+
+.foot {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-light);
+  text-align: center;
+  padding: 1.5rem;
+}
+
+dialog {
+  border: none;
+  border-radius: var(--radius);
+  padding: 1.5rem 2rem;
+  width: min(90vw, 380px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+dialog[open] {
+  background-color: var(--color-bg-light);
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+dialog h2 {
+  margin-top: 0;
+  color: var(--color-accent);
+}
+
+dialog button {
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.5rem 1.1rem;
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-light);
+  cursor: pointer;
+}
+
+dialog button:hover {
+  background-color: var(--color-accent);
+}
+
+@media (max-width: 600px) {
+  .site-header {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .about-img {
+    float: none;
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    margin: 0 0 1rem;
+  }
+
+  .bottomsign > button {
+    width: 100%;
+  }
+}
